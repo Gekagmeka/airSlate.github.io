@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Test</title>
+  <link rel="stylesheet" href="scss/main.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header"></header>
+		<main class="main"></main>
+		<footer class="footer"></footer>
+    <div class="login">
+      <div class="login-scroll">
+        <div class="login-content">
+          <h3 class="login-title">Log in to airSlate</h3>
+          <form class="login-form">
+            <div class="form-container">
+              <div class="input-group">
+                <label for="input-email" class="input-label">
+                  Email address
+                </label>
+                <input id="input-email" class="input-row" type="email" name="email" placeholder="Input" required>
+                <div class="input-error">Validation</div>
+              </div>
+              <div class="input-group">
+                <label for="input-pass" class="input-label">
+                  Password
+                </label>
+                <input id="input-pass" class="input-row" type="password" name="password" placeholder="Input">
+              </div>
+              <p class="form-footnote">
+                By clicking Log in, you agree to the <a class="link link-hightlighted" href="#">Terms&nbsp;of&nbsp;Services</a> and <a class="link" href="#">Privacy&nbsp;Policy</a>, including receipt of emails from of us about our service.
+              </p>
+              <button class="form-btn" type="submit">Log in</button>
+            </div>
+          </form>
+          <div class="login-divider">
+            <span class="divider-text">or continue with your social accounts</span>
+          </div>
+          <div class="login-social">
+            <ul class="list">
+              <li class="list-item">
+                <a href="#" class="list-link">
+                  <i class="list-ico ico ico-facebook">
+                    <svg>
+                      <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-facebook"></use>
+                      </svg>
+                  </i>
+                  <span class="list-text">Facebook</span>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="#" class="list-link">
+                  <i class="list-ico ico ico-google">
+                    <svg>
+                      <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-google"></use>
+                    </svg>
+                  </i>
+                  <span class="list-text">Google</span>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="#" class="list-link">
+                  <i class="list-ico ico ico-apple">
+                    <svg>
+                      <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-apple"></use>
+                    </svg>
+                  </i>
+                  <span class="list-text">Apple</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+	</div>
+	
+	<script src="js/main.js"></script>
+</body>
+</html>
