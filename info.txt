@@ -1,0 +1,7 @@
+npm i gulp -g
+npm i gulp
+
+npm i gulp -g
+npm i gulp-pug --save-dev
+
+gulp

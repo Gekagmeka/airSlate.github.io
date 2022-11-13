@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import 'reset'
+@import 'variables'
+
+html, .wrapper {
+	min-height 100vh
+}
+
+//common
+body{
+  background-color: $cobalt-500;
+	font-family: $base-font-family-sans-serif;
+}
+
+.container{
+	width 100%
+	max-width 1840px
+	padding 0 16px
+	margin 0 auto
+}
+
+.wrapper {
+	display flex
+	flex-direction column
+}
+
+.main {
+	flex 1
+}
+
+svg {
+    width 100%
+    height 100%
+}
+
+.ico {
+  display: inline-block
+}
+
+.login-modal {
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 100%
+  &__scroll {
+    position absolute
+    top 0
+    left 50%
+    width 100%
+    padding 48px 16px
+    max-height 100%
+    overflow-y auto
+    transform translateX(-50%)
+
+    @media screen and (max-width: 480px) {
+        padding 32px 16px
+    }
+  }
+}
+
+.login-modal__container {
+  position relative
+  margin 0 auto
+  max-width 552px
+  width 100%
+}
+
+.login-modal__logo {
+  display flex
+  justify-content center
+  margin 0 0 60px
+  @media screen and (max-width: 480px) {
+    margin: 0 0 32px
+  }
+}
+
+.login-modal__content {
+  background-color $white
+  padding 48px
+  border-radius 8px
+
+  @media screen and (max-width: 480px) {
+    padding 32px 24px
+  }
+
+  .login-modal__title {
+    margin 0 0 20px
+    font 700 24px/1.33 $base-font-family-sans-serif
+    color $trolley-grey-800
+  }
+}
+
+.login-modal__form {
+    margin 0 0 20px
+    .form__input-group {
+        position relative
+        margin 0 0 20px
+    }
+    .form__input-label {
+        display inline-block
+        font 700 14px/1.7 $base-font-family-sans-serif
+        color $trolley-grey-800
+    }
+    .form__input-row {
+        display block
+        width 100%
+        padding 8px
+        height 32px
+        border 1px solid $trolley-grey-300
+        border-radius 4px
+        font 400 14px/1.14 $base-font-family-sans-serif
+        color $trolley-grey-400
+        transition all 0.2s ease-in
+        &:hover {
+            border-color $trolley-grey-500
+        }
+        &:valid
+        &:focus {
+            color $trolley-grey-800
+        }
+        &:invalid:not(:focus):not(:placeholder-shown) {
+            border-color $jelly-bean-500
+            color $trolley-grey-800
+                & + .form__input-error {
+                    display block
+                }
+        }
+    }
+    .form__input-error {
+        position relative
+        bottom -16px
+        margin-top -16px
+        padding 0 8px
+        font 600 12px/1.33 $base-font-family-sans-serif
+        color $jelly-bean-500
+        display none
+    }
+    .form__footnote {
+        margin 0 0 12px
+        font 400 12px/1.33 $base-font-family-sans-serif
+        color $trolley-grey-700
+            .form__link {
+                text-decoration none
+                font-weight 600
+                color $slate-blue-600
+                transition all 0.2s ease-in
+                &:hover {
+                    color $slate-blue-400
+                }
+                &.form__link_hightlighted {
+                    text-decoration underline
+                }
+            }
+    }
+    .form__btn {
+        display flex
+        justify-content center
+        width 100%
+        padding 12px 16px
+        border-radius 4px
+        background-color $dark-orange-500
+        font 600 14px/1.14 $base-font-family-sans-serif
+        color $white
+        transition all 0.2s ease-in
+        &:hover {
+        cursor pointer
+        background-color $dark-orange-300
+        }
+    }
+}
+
+.login-modal__divider {
+  position relative
+  display flex
+  justify-content center
+  margin 0 0 20px
+  font 600 14px/1.7 $base-font-family-sans-serif
+  color $trolley-grey-500
+
+  .divider__text {
+    display inline-block
+    position relative
+    max-width 90%
+    background-color $white
+    padding 0 8px
+    text-align center
+    z-index 2
+    @media screen and (max-width: 414px) {
+        max-width 70%
+    }
+  }
+    &::before,
+    &::after {
+      content ''
+      position absolute
+      top 50%
+      height 1px
+      max-width 90px
+      width 50%
+      border-radius 4px
+      background-color $light-grey
+      transform translateY(-50%)
+      z-index 1
+    }
+    &::before {
+      left 0
+    }
+    &::after {
+      right 0
+    }
+}
+
+.social__list {
+    display flex
+    margin 0 -6px
+
+    @media screen and (max-width: 414px) {
+        flex-direction column
+    }
+
+  .social__item {
+    flex 1
+    padding 0 6px
+
+    @media screen and (max-width: 414px) {
+      margin 0 0 8px
+    }
+
+    &:last-child {
+      @media screen and (max-width: 414px) {
+        margin 0
+      }
+    }
+  }
+
+  .social__link {
+    display flex
+    justify-content center
+    align-items center
+    padding 8px
+    border-radius 4px
+    border 1px solid $trolley-grey-300
+    .social__ico {
+        &.social__facebook {
+            width 20px
+            height 20px
+        }
+        &.social__google {
+            width 17px
+            height 20px
+        }
+        &.social__apple {
+            width 17px
+            height 20px
+        }
+    }
+  }
+
+  .social__text {
+    margin-left 8px
+    font 600 14px/1.7 $base-font-family-sans-serif
+    color $trolley-grey-800
+  }
+}

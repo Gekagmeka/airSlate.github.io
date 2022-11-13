@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Test for airSlate
+        link(rel="stylesheet", href="styles/main.css")
+    body
+        div.wrapper
+            header.header
+            main.main
+            footer.footer
+            div.login-modal
+                div.login-modal__scroll
+                    div.login-modal__container
+                        div.login-modal__logo
+                            img(src="images/logo.svg", alt="airSlate logo")
+                        div.login-modal__content
+                            h3.login-modal__title Log in to airSlate
+                            form.login-modal__form.form
+                                div.form__container
+                                    div.form__input-group
+                                        label(class='form__input-label', for="form__input-email") Email address
+                                        input(id="form__input-email", class="form__input-row", type="email", name="email", placeholder="Input", required)
+                                        div.form__input-error Validation
+                                    div.form__input-group
+                                        label(class='form__input-label', for="form__input-pass") Password
+                                        input(id="form__input-pass", class="form__input-row", type="password", name="password", placeholder="Input", required, pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,}")
+                                        div.form__input-error Validation
+                                    p.form__footnote By clicking Log in, you agree to the <a class="form__link form__link_hightlighted" href="#">Terms&nbsp;of&nbsp;Services</a> and <a class="form__link" href="#">Privacy&nbsp;Policy</a>, including receipt of emails from of us about our service.
+                                    button(class="form__btn", type="submit") Log in
+                            div.login-modal__divider.divider
+                                span.divider__text or continue with your social accounts
+                            div.login-modal__social.social
+                                ul.social__list
+                                    li.social__item
+                                        a(class="social__link", href="#")
+                                            i.social__ico.ico.social__facebook
+                                                svg
+                                                    use(xmlns="http://www.w3.org/2000/svg", xlink:href="images/svg/symbol-defs.svg#ico-facebook")
+                                            span.social__text Facebook
+                                    li.social__item
+                                        a(class="social__link", href="#")
+                                            i.social__ico.ico.social__google
+                                                svg
+                                                    use(xmlns="http://www.w3.org/2000/svg", xlink:href="images/svg/symbol-defs.svg#ico-google")
+                                            span.social__text Google
+                                    li.social__item
+                                        a(class="social__link", href="#")
+                                            i.social__ico.ico.social__apple
+                                                svg
+                                                    use(xmlns="http://www.w3.org/2000/svg", xlink:href="images/svg/symbol-defs.svg#ico-apple")
+                                            span.social__text Apple

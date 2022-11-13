@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Test for airSlate</title>
+    <link rel="stylesheet" href="styles/main.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header"></header>
+      <main class="main"></main>
+      <footer class="footer"></footer>
+      <div class="login-modal">
+        <div class="login-modal__scroll">
+          <div class="login-modal__container">
+            <div class="login-modal__logo"><img src="images/logo.svg" alt="airSlate logo"/></div>
+            <div class="login-modal__content">
+              <h3 class="login-modal__title">Log in to airSlate</h3>
+              <form class="login-modal__form form">
+                <div class="form__container">
+                  <div class="form__input-group">
+                    <label class="form__input-label" for="form__input-email">Email address</label>
+                    <input class="form__input-row" id="form__input-email" type="email" name="email" placeholder="Input" required="required"/>
+                    <div class="form__input-error">Validation</div>
+                  </div>
+                  <div class="form__input-group">
+                    <label class="form__input-label" for="form__input-pass">Password</label>
+                    <input class="form__input-row" id="form__input-pass" type="password" name="password" placeholder="Input" required="required" pattern="(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{4,}"/>
+                    <div class="form__input-error">Validation</div>
+                  </div>
+                  <p class="form__footnote">By clicking Log in, you agree to the <a class="form__link form__link_hightlighted" href="#">Terms&nbsp;of&nbsp;Services</a> and <a class="form__link" href="#">Privacy&nbsp;Policy</a>, including receipt of emails from of us about our service.</p>
+                  <button class="form__btn" type="submit">Log in</button>
+                </div>
+              </form>
+              <div class="login-modal__divider divider"><span class="divider__text">or continue with your social accounts</span></div>
+              <div class="login-modal__social social">
+                <ul class="social__list">
+                  <li class="social__item"><a class="social__link" href="#"><i class="social__ico ico social__facebook">
+                        <svg>
+                          <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-facebook"></use>
+                        </svg></i><span class="social__text">Facebook</span></a></li>
+                  <li class="social__item"><a class="social__link" href="#"><i class="social__ico ico social__google">
+                        <svg>
+                          <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-google"></use>
+                        </svg></i><span class="social__text">Google</span></a></li>
+                  <li class="social__item"><a class="social__link" href="#"><i class="social__ico ico social__apple">
+                        <svg>
+                          <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-apple"></use>
+                        </svg></i><span class="social__text">Apple</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
